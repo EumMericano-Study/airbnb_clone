@@ -22,7 +22,7 @@ class RoomType(AbstractItem):
 
     class Meta:
         verbose_name = "Room Type"
-        ordering = ['name']
+        ordering = ["name"]
 
 
 class Amenity(AbstractItem):
@@ -48,6 +48,7 @@ class HouseRule(AbstractItem):
     class Meta:
         verbose_name = "House Rule"
 
+
 class Photo(core_models.TimeStampedModel):
 
     """ Photo Model Definition """
@@ -58,6 +59,7 @@ class Photo(core_models.TimeStampedModel):
 
     def __str__(self):
         return self.caption
+
 
 class Room(core_models.TimeStampedModel):
 
@@ -70,9 +72,9 @@ class Room(core_models.TimeStampedModel):
     price = models.IntegerField()
     address = models.CharField(max_length=140)
     guests = models.IntegerField()
-    bed = models.IntegerField()
+    beds = models.IntegerField()
     bedrooms = models.IntegerField()
-    bath = models.IntegerField()
+    baths = models.IntegerField()
     check_in = models.TimeField()
     check_out = models.TimeField()
     instant_book = models.BooleanField(default=False)
